@@ -1,6 +1,6 @@
 """Exercise 01 planning a tea party"""
 
-_author_: str = "730431256"
+__author__: str = "730431256"
 
 
 def main_planner(guests: int) -> None:
