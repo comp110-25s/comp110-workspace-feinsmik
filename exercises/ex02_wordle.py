@@ -1,4 +1,4 @@
-"""Making A Wordle Program"""
+"""Making A Wordle Program EX02"""
 
 __author__: str = "730431256"
 
