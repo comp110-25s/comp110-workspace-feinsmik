@@ -2,8 +2,8 @@
 
 __author__: str = "730431256"
 
-from fish import Fish
-from bear import Bear
+from exercises.EX04.fish import Fish
+from exercises.EX04.bear import Bear
 
 
 class River:
@@ -55,10 +55,10 @@ class River:
 
     def bears_eating(self) -> None:
         """Each bear eats 3 fish if at least 5 fish are available."""
-        fish_count = 0
-        for _ in self.fish:
-            fish_count += 1
         for bear in self.bears:
+            fish_count = 0
+            for _ in self.fish:
+                fish_count += 1
             if fish_count >= 5:
                 self.remove_fish(3)
                 bear.eat(3)
@@ -77,7 +77,7 @@ class River:
     def repopulate_fish(self) -> None:
         """Each pair of fish produces 4 new fish."""
         fish_count = 0
-        for fish in self.fish:
+        for _ in self.fish:
             fish_count += 1
         num_new_fish = (fish_count // 2) * 4
         for _ in range(num_new_fish):
